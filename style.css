@@ -32,6 +32,52 @@ h1 {
     background-color: rgba(255, 228, 196, 0);
 }
 
+/* Afastar os itens da navbar */
+.navbar-nav .nav-item {
+    margin-left: 7px; /* Espaçamento à esquerda de cada item */
+    margin-right: 7px; /* Espaçamento à direita de cada item */
+}
+
+/* Afastar um pouco mais os botões de Login e Cadastre-se */
+.navbar-nav .nav-item:last-child {
+    margin-right: 12px; /* Adiciona mais espaço à direita dos botões finais */
+}
+
+/* Estilo para os botões Login e Cadastre-se */
+.nav-item .nav-link {
+    font-size: 1.1rem;
+    font-family: "Sour Gummy", sans-serif;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+/* Estilo para o botão Login */
+.nav-item .nav-link[href="login.html"] {
+    background-color: #730080; /* Cor de fundo roxa */
+    color: #fff; /* Cor do texto */
+    border: 2px solid #730080; /* Borda do botão */
+}
+
+.nav-item .nav-link[href="login.html"]:hover {
+    background-color: #590064; /* Cor de fundo roxa escura no hover */
+    color: #f8f9fa; /* Cor do texto no hover */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilo para o botão Cadastre-se */
+.nav-item .nav-link[href="cadastro.html"] {
+    background-color: #ff57e0; /* Cor de fundo rosa */
+    color: #fff; /* Cor do texto */
+    border: 2px solid #ff57e0; /* Borda do botão */
+}
+
+.nav-item .nav-link[href="cadastro.html"]:hover {
+    background-color: #d438b1; /* Cor de fundo rosa escuro no hover */
+    color: #f8f9fa; /* Cor do texto no hover */
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
 /* Carrossel de imagens */
 .carousel-image {
     height: 400px; /* Altura padrão */

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rádio Web Diário Digital</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/DD digital/Img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body ng-app="radioApp" ng-controller="radioController">
@@ -13,10 +14,12 @@
     <header class="navbar navbar-expand-lg navbar-secondary bg-blue">
         <a class="navbar-brand" href="#"><img src="/DD digital/Img/Logo.png" alt="Diário Digital Logo" class="logo"></a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Parcerias</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastre-se</a></li>
         </ul>
     </header>
 
@@ -26,7 +29,7 @@
         <h1 class="text-center mt-4">Podcast - Diário Digital</h1>
 
         <!-- Carrossel de imagens -->
-        <div id="carouselRadio" class="carousel slide" data-ride="carousel">
+        <div id="carouselRadio" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="/DD digital/Img/foto a.jpeg" class="d-block w-100 carousel-image" alt="Ambiente Rádio 1">
