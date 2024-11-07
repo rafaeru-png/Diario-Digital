@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Fundo em gradiente */
+body {
+    background: linear-gradient(135deg, rgba(0,18,175,1) 0%, rgba(190,37,207,1) 56%, rgba(229,96,255,1) 100%);
+    font-family: "Sour Gummy", sans-serif;
+}
+
+/* Logo e Header */
+.logo {
+    width: 244px;
+    height: 100px;
+}
+
+h1 {
+    padding-bottom: 2%;
+    color: rgb(255, 179, 236);
+    font-family: "Sour Gummy", sans-serif;
+}
+
+.nav-link {
+    color: rgb(255, 179, 236);
+    font-size: 1.2rem;
+    font-family: "Sour Gummy", sans-serif;
+    transition: background-color 2.8s ease, transform 1.2s ease;
+}
+.nav-link:hover {
+    color: #8d0181;
+    border-radius: 45%;
+    transition-duration: 0.8s;
+    background-color: rgba(255, 228, 196, 0);
+}
+
+/* Carrossel de imagens */
+.carousel-image {
+    height: 400px; /* Altura padrão */
+    object-fit: cover; /* Cobre o tamanho padronizado */
+    border-radius: 5%;
+}
+
+/* Botões e cores */
+.btn-primary {
+    background-color: #0012af;
+    border-color: #0012af;
+}
+.btn-primary:hover {
+    background-color: #730080;
+    border-color: #730080;
+}
+
+/* Estilização das seções */
+.episode-preview, .comments, .suggestions {
+    margin: 30px 0;
+    border-radius: 10%;
+}

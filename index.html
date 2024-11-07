@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Web Diário Digital</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="radioApp" ng-controller="radioController">
+
+    <!-- Header com navegação -->
+    <header class="navbar navbar-expand-lg navbar-secondary bg-blue">
+        <a class="navbar-brand" href="#"><img src="/DD digital/Img/Logo.png" alt="Diário Digital Logo" class="logo"></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Parcerias</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+
+        <!-- Título do Podcast -->
+        <h1 class="text-center mt-4">Podcast - Diário Digital</h1>
+
+        <!-- Carrossel de imagens -->
+        <div id="carouselRadio" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/DD digital/Img/foto a.jpeg" class="d-block w-100 carousel-image" alt="Ambiente Rádio 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/DD digital/Img/foto b.jpeg" class="d-block w-100 carousel-image" alt="Ambiente Rádio 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/DD digital/Img/foto c.jpeg" class="d-block w-100 carousel-image" alt="Ambiente Rádio 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselRadio" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselRadio" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <!-- Seção de prévia do último episódio -->
+        <section class="episode-preview text-center">
+            <h2>Último Episódio</h2>
+            <audio controls>
+                <source src="path/to/last-episode.mp3" type="audio/mp3">
+                Seu navegador não suporta o player de áudio.
+            </audio>
+        </section>
+
+        <!-- Seção de comentários -->
+        <section class="comments">
+            <h2>Comentários</h2>
+            <div class="form-group">
+                <input type="text" ng-model="commentName" class="form-control" placeholder="Seu Nome">
+                <textarea ng-model="newComment" class="form-control mt-2" placeholder="Escreva seu comentário"></textarea>
+                <button class="btn btn-primary mt-2" ng-click="addComment()">Enviar</button>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="comment in comments track by $index">
+                    <strong>{{ comment.name }}:</strong> {{ comment.text }}
+                </li>
+            </ul>
+        </section>
+
+        <!-- Seção de sugestão de músicas -->
+        <section class="suggestions">
+            <h2>Sugira uma Música</h2>
+            <div class="form-group">
+                <input type="text" ng-model="newSuggestion" class="form-control" placeholder="Nome da música ou artista" ng-disabled="suggestionSent">
+                <button class="btn btn-primary mt-2" ng-click="addSuggestion()" ng-disabled="suggestionSent">Enviar</button>
+                <p class="text-success mt-2" ng-show="suggestionSent">Sugestão enviada com sucesso!</p>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="suggestion in suggestions track by $index">
+                    {{ suggestion }}
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
